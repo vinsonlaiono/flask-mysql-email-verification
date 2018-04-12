@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Email Validation</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <h1>Email Validation with DB</h1>
+        
+        <h3>Email addresses entered</h3>
+        <br>
+        <br>
+        {% for emailed in email%}
+        <p>Your email is {{ emailed.email }}</p><a href="">delete</a>
+
+        {% endfor %}
+    </div>
+</body>
+</html>
