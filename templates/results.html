@@ -9,11 +9,16 @@
     <div class="wrapper">
         <h1>Email Validation with DB</h1>
         
-        <h3>Email addresses entered</h3>
-        <br>
+        <h3>Email addresses entered</h3> <a href="go_back" >Go back</a>
+        <p style="color: green;">The email you entered {{name}} is a valid email. Thank you!</p>
+
+
+
         <br>
         {% for emailed in email%}
-        <p>Your email is {{ emailed.email }}</p><a href="">delete</a>
+        <p>Your email is {{ emailed.email }}</p><p>{{emailed.created_at.year}}-{{ emailed.created_at.month}}-{{emailed.created_at.day}} {{emailed.created_at.hour}}:{{emailed.created_at.minute}}</p>
+        
+        <a href="delete/{{emailed.id}}">delete user ID:{{ emailed.id }}</a>
 
         {% endfor %}
     </div>
